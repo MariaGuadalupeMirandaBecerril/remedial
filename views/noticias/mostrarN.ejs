@@ -1,0 +1,45 @@
+<%- include("../templates/encabezado") %>
+<%- include("../templates/menu") %>
+<div class="container at-5">
+    <div class="card">
+        <div class="card-header">
+            <h1>Noticias</h1>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Titulo</th>
+                        <th>Fecha</th>
+                        <th>Contenido</th>
+                        <th>Foto</th>
+                        <th>Editar/Borrar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%
+                    noticias.forEach((noticia, j)=>{
+
+                    %>
+                        <tr>
+                            <td><%= j+1 %></td>
+                            <td><%= noticia.titulo %></td>
+                            <td><%= noticia.fecha %></td>
+                            <td><%= noticia.contenido %></td>
+                            <td><img src="/imagesNot/<%= noticia.foto %>" width="100px" alt=""></td>
+                            <td>
+                                <a href="/editarNoticia/<%= noticia.id %>">Editar Noticia</a>
+                                <a href="/borrarNoticia/<%= noticia.id %>">Borrar Noticia</a>
+                            </td>
+                        </tr>
+                    <%
+                    });
+                    %>
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer"></div>
+</div>
+
+<%- include("../templates/pie") %>

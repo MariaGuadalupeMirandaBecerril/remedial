@@ -1,0 +1,13 @@
+ambiente video tutoriales de iot (packet).
+dispositivos video tutoriales de iot (packet).
+
+* Controlar varios dispositivos de casa por medio de un telefono.
+
+--------
+- pkt.
+- pka.
+- Video tutorial bien explicado.
+- PDF del pka.
+- documentación de resolución.
+
+control de ambiente en packet tracer
